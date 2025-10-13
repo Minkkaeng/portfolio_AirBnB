@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio_AirBnB/static/css/main.ef3decfa.css",
+    "main.css": "/portfolio_AirBnB/static/css/main.53bc5766.css",
     "main.js": "/portfolio_AirBnB/static/js/main.1e0a1364.js",
     "index.html": "/portfolio_AirBnB/index.html",
-    "main.ef3decfa.css.map": "/portfolio_AirBnB/static/css/main.ef3decfa.css.map",
+    "main.53bc5766.css.map": "/portfolio_AirBnB/static/css/main.53bc5766.css.map",
     "main.1e0a1364.js.map": "/portfolio_AirBnB/static/js/main.1e0a1364.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef3decfa.css",
+    "static/css/main.53bc5766.css",
     "static/js/main.1e0a1364.js"
   ]
 }
