@@ -25,7 +25,9 @@ export default function Headers({ isLoggedIn, onLogout }) {
   return (
     <header className="header">
       <div className="headerlist">
-        <p onClick={() => navigate("/")} className="logo">airbnb</p>
+        <p onClick={() => navigate("/")} className="logo">
+          airbnb
+        </p>
 
         <nav aria-label="주 메뉴">
           <ul className="mainmenu">
@@ -37,12 +39,7 @@ export default function Headers({ isLoggedIn, onLogout }) {
                 <ul className="submenu" role="menu">
                   {items.map((it) => (
                     <li role="none" key={it.label}>
-                      <button
-                        type="button"
-                        role="menuitem"
-                        className="submenu-btn"
-                        onClick={() => navigate(it.to)}
-                      >
+                      <button type="button" role="menuitem" className="submenu-btn" onClick={() => navigate(it.to)}>
                         {it.label}
                       </button>
                     </li>
@@ -56,13 +53,19 @@ export default function Headers({ isLoggedIn, onLogout }) {
         <div className="logsetting">
           {isLoggedIn ? (
             <>
-              <button type="button" onClick={() => navigate("/mypage")}>마이페이지</button>
-              <button type="button" onClick={onLogout}>로그아웃</button>
+              <button type="button" onClick={() => navigate("/mypage")}>
+                마이페이지
+              </button>
+              <button type="button" onClick={onLogout}>
+                로그아웃
+              </button>
             </>
           ) : (
             <>
-              <button type="button" onClick={() => navigate("/login")}>로그인</button>
-              <button type="button" onClick={() => alert("회원가입 페이지는 준비 중입니다.")}>
+              <button type="button" onClick={() => navigate("/login")}>
+                로그인
+              </button>
+              <button type="button" onClick={() => navigate("/Signup")}>
                 회원가입
               </button>
             </>

@@ -1,0 +1,242 @@
+:root {
+  --brand: #ff385c;
+  --brand2: #ff6589;
+  --text-dark: #333;
+  --text-light: #555;
+  --bg-light: #fff8f8;
+  --radius: 16px;
+  --font: Inter, "Noto Sans KR", "Apple SD Gothic Neo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+.signup-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  background: linear-gradient(135deg, #ffe6ec 0%, #fffafa 100%);
+  font-family: var(--font);
+  box-sizing: border-box;
+}
+
+.signup-card {
+  flex: 0 0 520px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: var(--radius);
+  padding: 40px 36px 32px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+.signup-header {
+  padding-bottom: 20px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.signup-logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--brand);
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.signup-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.signup-sub {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.signup-row {
+  width: 100%;
+}
+
+.signup-row--double {
+  display: flex;
+  gap: 12px;
+}
+
+.signup-row--checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"],
+.field input[type="date"] {
+  width: 100%;
+  padding: 11px 13px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  color: var(--text-dark);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.field input::placeholder {
+  color: #bbb;
+}
+
+.field input:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 2px rgba(255, 56, 92, 0.18);
+  background-color: #fffefe;
+}
+
+.field-help {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-light);
+}
+
+.checkbox input[type="checkbox"] {
+  margin-top: 3px;
+}
+
+.checkbox--required span {
+  color: var(--text-dark);
+}
+
+.inline-link {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  font-size: 13px;
+  color: var(--brand);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.inline-link:hover {
+  color: var(--brand2);
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 13px 18px;
+  border-radius: 999px;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand), var(--brand2));
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.signup-btn:hover:not(:disabled) {
+  filter: brightness(1.05);
+  box-shadow: 0 10px 22px rgba(255, 56, 92, 0.4);
+}
+
+.signup-btn:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 6px 14px rgba(255, 56, 92, 0.35);
+}
+
+.signup-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.signup-footer {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.signup-side {
+  flex: 0 0 320px;
+  padding: 18px 4px;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-side-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.signup-side-desc {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 18px;
+}
+
+.signup-side-list {
+  padding-left: 18px;
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+@media (max-width: 960px) {
+  .signup-page {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 16px;
+  }
+
+  .signup-side {
+    margin-top: 24px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .signup-card {
+    padding: 28px 18px 22px;
+  }
+
+  .signup-row--double {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

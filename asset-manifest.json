@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.css": "/portfolio_AirBnB/static/css/main.9014c53d.css",
+    "main.js": "/portfolio_AirBnB/static/js/main.1e0a1364.js",
+    "index.html": "/portfolio_AirBnB/index.html",
+    "main.9014c53d.css.map": "/portfolio_AirBnB/static/css/main.9014c53d.css.map",
+    "main.1e0a1364.js.map": "/portfolio_AirBnB/static/js/main.1e0a1364.js.map"
+  },
+  "entrypoints": ["static/css/main.9014c53d.css", "static/js/main.1e0a1364.js"]
+}

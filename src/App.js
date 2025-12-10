@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Homes from "./components/Homes";
 import Detail from "./pages/Detail";
 import Login from "./pages/Login";
+import Signup from "./components/Signup";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import FAQ from "./pages/FAQ";
@@ -71,14 +72,9 @@ function App() {
     setCart((prev) => {
       const existing = prev.find((item) => item.id === home.id);
       if (existing) {
-        return prev.map((item) =>
-          item.id === home.id ? { ...item, quantity: item.quantity + 1 } : item
-        );
+        return prev.map((item) => (item.id === home.id ? { ...item, quantity: item.quantity + 1 } : item));
       }
-      return [
-        ...prev,
-        { ...home, quantity: 1, price: Number(home.price.replace(/[₩,]/g, "")) },
-      ];
+      return [...prev, { ...home, quantity: 1, price: Number(home.price.replace(/[₩,]/g, "")) }];
     });
   };
 
@@ -87,9 +83,7 @@ function App() {
   const handleIncreaseQuantity = (id) =>
     setCart((prev) => prev.map((i) => (i.id === id ? { ...i, quantity: i.quantity + 1 } : i)));
   const handleDecreaseQuantity = (id) =>
-    setCart((prev) =>
-      prev.map((i) => (i.id === id && i.quantity > 1 ? { ...i, quantity: i.quantity - 1 } : i))
-    );
+    setCart((prev) => prev.map((i) => (i.id === id && i.quantity > 1 ? { ...i, quantity: i.quantity - 1 } : i)));
 
   return (
     <div className="App">
@@ -193,6 +187,9 @@ function App() {
 
         {/* 로그인 */}
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
+
+        {/* ✅ 회원가입 페이지 추가 */}
+        <Route path="/signup" element={<Signup />} />
 
         {/* 상세보기 풀페이지(링크 공유/새로고침 대비) */}
         <Route path="/detail/:id" element={<Detail />} />
