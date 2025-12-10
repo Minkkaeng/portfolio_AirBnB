@@ -1,0 +1,45 @@
+/* 전역 리셋: 인풋 폭 줄어듦 방지 핵심 */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; padding: 0; }
+img { display: block; max-width: 100%; height: auto; }
+button, input, textarea, select { font: inherit; color: inherit; }
+
+input, textarea {
+  min-width: 0;   /* flex 컨테이너에서 수축 방지 */
+  width: 100%;    /* 기본 100% 폭 */
+}
+
+/* 유틸 */
+.noshrink { flex-shrink: 0; }
+
+/* CRA 잔재 초기화 */
+.App { text-align: initial; }
+
+/* Airbnb 스타일 변수 */
+:root{
+  --air-text:#222;
+  --air-sub:#717171;
+  --air-border:#e5e5e5;
+  --air-strong:#d6d6d6;
+  --air-bg:#fff;
+  --air-soft:#f7f7f7;
+  --air-accent:#ff385c;
+}
+
+/* 검색 인풋 공통 스타일 */
+.search-input {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--air-border);
+  border-radius: 12px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  transition: none;
+  background: var(--air-bg);
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--air-strong);
+  box-shadow: 0 0 0 3px rgba(255,56,92,.18);
+}

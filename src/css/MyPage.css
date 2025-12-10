@@ -1,0 +1,226 @@
+/* ---------- 내 정보 카드 ---------- */
+.myinfo-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.myinfo-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff385c, #ff9bb0);
+  box-shadow: 0 3px 10px rgba(255,56,92,0.35);
+  flex-shrink: 0;
+}
+
+.myinfo-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.myinfo-card .muted {
+  margin: 2px 0 0 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.myinfo-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 16px;
+  margin-top: 6px;
+}
+
+.myinfo-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.myinfo-form .field label {
+  font-size: 13px;
+  color: #666;
+}
+
+.myinfo-form .field input {
+  padding: 12px 14px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #fafafa;
+  font-size: 15px;
+  transition: border .15s, box-shadow .15s, background .15s;
+}
+.myinfo-form .field input:focus {
+  border-color: #ff385c;
+  box-shadow: 0 0 6px rgba(255,56,92,0.25);
+  outline: none;
+  background: #fff;
+}
+
+.checkbox-row {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 2px;
+}
+
+.actions-row {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+}
+.btn.primary {
+  background: linear-gradient(135deg, #ff385c, #ff6589);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 10px rgba(255,56,92,0.35);
+}
+.btn.primary:hover {
+  transform: translateY(-1px);
+}
+.btn.ghost {
+  background: #fff;
+  border: 1px solid #eee;
+  color: #444;
+}
+.btn.ghost:hover {
+  background: #f8f8f8;
+}
+
+/* 반응형: 폼을 한 컬럼으로 */
+@media (max-width: 720px) {
+  .myinfo-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.mypage-container {
+  width: 900px;
+  max-width: 100%;
+  margin: 100px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.mypage-container h2 {
+  text-align: center;
+  color: #ff385c;
+  margin-bottom: 30px;
+}
+.mypage-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.mypage-tabs button {
+  padding: 10px 25px;
+  border: 1px solid #ff385c;
+  border-radius: 30px;
+  background: #fff;
+  color: #ff385c;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.mypage-tabs button.active,
+.mypage-tabs button:hover {
+  background: #ff385c;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(255,56,92,0.3);
+}
+.mypage-content {
+  margin-top: 20px;
+}
+
+/* 예약 내역 카드 스타일 */
+.reservations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reservation-card {
+  display: flex;
+  position: relative;
+  gap: 20px;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.reservation-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.reservation-info {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-card h3 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.reservation-card p {
+  margin-bottom: 5px;
+  color: #555;
+}
+.reservation-card .price {
+  color: #ff385c;
+  font-weight: bold;
+}
+
+/* 비어있음 */
+.empty,
+.mypage-empty {
+  text-align: center;
+  color: #999;
+  margin-top: 40px;
+}
+
+/* 예약 취소 버튼: 우하단 고정 */
+.cancel-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 8px 14px;
+  background-color: #ff4d4d;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cancel-btn:hover {
+  background-color: #e03c3c;
+}

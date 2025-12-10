@@ -1,0 +1,101 @@
+:root {
+  --brand: #ff385c;
+  --brand2: #ff6589;
+  --text-dark: #333;
+  --text-light: #555;
+  --bg-light: #fff8f8;
+  --radius: 16px;
+  --font: Inter, "Noto Sans KR", "Apple SD Gothic Neo", system-ui, -apple-system, 
+           "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--font);
+}
+
+/* 전체 페이지 */
+.about-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe6ec 0%, #fffafa 100%);
+  padding: 60px 20px;
+}
+
+/* 카드형 본문 */
+.about-content {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius);
+  padding: 60px 50px;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* 제목 */
+.about-content h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: var(--brand);
+  letter-spacing: -0.5px;
+}
+
+/* 본문 */
+.about-content p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--text-light);
+}
+
+/* 강조 텍스트 */
+.about-content strong {
+  color: var(--brand);
+  font-weight: 700;
+}
+.about-content em {
+  color: var(--brand2);
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* 장식 밑줄 */
+.about-content::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 35px auto 0;
+  background: linear-gradient(135deg, var(--brand), var(--brand2));
+  border-radius: 2px;
+}
+
+/* 등장 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 40px 25px;
+  }
+  .about-content h1 {
+    font-size: 2.2rem;
+  }
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
